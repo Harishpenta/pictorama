@@ -1,16 +1,28 @@
-# pictorama
+# Pictorama - Your Personal Wallpaper Haven
 
-A new Flutter project.
+Welcome to Pictorama, the ultimate Flutter wallpaper application designed to bring beauty and customization to your device's screen. Pictorama not only provides a vast collection of stunning wallpapers but also ensures a smooth and delightful user experience, thanks to its Clean Architecture design.
 
-## Getting Started
+# Features:
 
-This project is a starting point for a Flutter application.
+Diverse Wallpaper Collection
+Explore a diverse range of high-quality wallpapers curated to cater to every taste and style. From breathtaking landscapes to minimalist patterns, Wallpaperify has something for everyone.
 
-A few resources to get you started if this is your first Flutter project:
+# Trending Wallpapers
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Stay up-to-date with the latest trends in wallpapers. Our Trending Wallpapers section showcases the most popular and sought-after backgrounds, ensuring you're always on the cutting edge of style.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Clean Architecture Design
+
+Pictorama is built with Clean Architecture principles, separating the application into distinct layers: Presentation, Domain, and Data. This ensures maintainability, testability, and scalability, making Pictorama a robust and future-proof application.
+
+# Favorites and Collections
+
+Create your personalized wallpaper collections and mark your favorite backgrounds. Pictorama allows you to organize and access your preferred wallpapers conveniently.
+
+# Flutter Framework
+
+Powered by the Flutter framework, Pictorama delivers a native-like experience across various platforms. Enjoy smooth animations, fast performance, and a consistent UI on both Android and iOS devices.
+
+## Screenshots:
+
+![Screenshot](assets/screenshots/screenshot1.png)
