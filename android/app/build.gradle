@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.pictorama"
+    namespace "com.pictorama"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
