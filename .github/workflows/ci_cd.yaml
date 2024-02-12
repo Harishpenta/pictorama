@@ -36,3 +36,11 @@ jobs:
         serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
         groups: testers
         file: build/app/outputs/flutter-apk/app-release.apk
+      
+    - name: Debug Firebase Distribution
+      run: |
+        echo "App ID: $FIREBASE_APP_ID"
+        echo "Service Credentials: $FIREBASE_SERVICE_ACCOUNT"
+        echo "Groups: $FIREBASE_GROUPS"
+        echo "APK File: $APK_FILE"
+        # Add more debug statements as needed
