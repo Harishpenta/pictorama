@@ -20,9 +20,14 @@ jobs:
 
     - name: Install dependencies
       run: flutter pub get
+    
+    - name: Set environment variables
+      run: echo "ENV_SECRET_INFO=$ENV_SECRET_INFO" > .env
 
     - name: Run tests
       run: flutter test
 
     - name: Build APK
       run: flutter build apk
+      env:
+        ENV_SECRET_INFO: ${{ secrets.ENV_SECRET_INFO }}
