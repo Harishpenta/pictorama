@@ -23,12 +23,13 @@ jobs:
 
     - name: Authenticate with Firebase
       run: |
-         echo "$FIREBASE_SERVICE_ACCOUNT" > service-account.json 
-         firebase use --add "$FIREBASE_PROJECT_ALIAS" --token "$FIREBASE_TOKEN"
+        echo "$FIREBASE_SERVICE_ACCOUNT" > $GITHUB_WORKSPACE/service-account.json
+        export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/service-account.json
+        cd $GITHUB_WORKSPACE  # Make sure you are in the workspace directory
+        firebase use --add "$FIREBASE_PROJECT_ALIAS"
       env:
         FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         FIREBASE_PROJECT_ALIAS: pictorama-797df
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
