@@ -13,6 +13,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     
+    - name: Install Firebase CLI
+      uses: actions/setup-node@v3
+      with:
+        node-version: '10'  # Use an appropriate Node.js version
+
+    - name: Install Firebase CLI
+      run: npm install -g firebase-tools
+
     - name: Authenticate with Firebase
       run: |
          echo "$FIREBASE_SERVICE_ACCOUNT" > service-account.json 
