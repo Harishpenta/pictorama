@@ -26,6 +26,7 @@ jobs:
         echo "$FIREBASE_SERVICE_ACCOUNT" > $GITHUB_WORKSPACE/service-account.json
         export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/service-account.json
         cd $GITHUB_WORKSPACE  # Make sure you are in the workspace directory
+        firebase init --skip
         firebase use --add "$FIREBASE_PROJECT_ALIAS"
       env:
         FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
