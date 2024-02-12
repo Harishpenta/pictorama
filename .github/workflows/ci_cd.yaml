@@ -12,6 +12,15 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    
+    - name: Authenticate with Firebase
+      run: |
+         echo "$FIREBASE_SERVICE_ACCOUNT" > secrets/firebase_credentials.json 
+         firebase use --add "$FIREBASE_PROJECT_ALIAS" --token "$FIREBASE_TOKEN"
+      env:
+        FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        FIREBASE_PROJECT_ALIAS: pictorama-797df
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
