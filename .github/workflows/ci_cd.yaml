@@ -15,7 +15,7 @@ jobs:
     
     - name: Authenticate with Firebase
       run: |
-         echo "$FIREBASE_SERVICE_ACCOUNT" > secrets/firebase_credentials.json 
+         echo "$FIREBASE_SERVICE_ACCOUNT" > service-account.json 
          firebase use --add "$FIREBASE_PROJECT_ALIAS" --token "$FIREBASE_TOKEN"
       env:
         FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
