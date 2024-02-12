@@ -28,3 +28,11 @@ jobs:
       run: flutter build apk
       env:
         ENV_SECRET_INFO: ${{ secrets.ENV_SECRET_INFO }}
+
+    - name: Deploy to Firebase App Distribution
+      uses: w9jds/firebase-action@v2
+      with:
+        appId: ${{ secrets.FIREBASE_APP_ID }}
+        token: ${{ secrets.FIREBASE_TOKEN }}
+        groups: internal
+        file: build/app/outputs/flutter-apk/app-release.apk
